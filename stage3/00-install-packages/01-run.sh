@@ -11,7 +11,7 @@ chmod a+x build/_bin/install.sh
 cd "${current_dir}"
 
 mkdir -p "${ROOTFS_DIR}/usr/local/share/templog"
-cp -r files/build/* "${ROOTFS_DIR}/usr/local/share/templog/"
+cp -r pitemplog/build/* "${ROOTFS_DIR}/usr/local/share/templog/"
 chmod a+x "${ROOTFS_DIR}/usr/local/share/templog/_bin/*.sh"
 chmod a+x "${ROOTFS_DIR}/usr/local/share/templog/_bin/*.py"
 chmod u+x "${ROOTFS_DIR}/usr/local/share/templog/_sbin/*.sh"

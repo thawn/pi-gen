@@ -20,7 +20,7 @@ on_chroot <<- \EOF
 	/usr/local/share/templog/_bin/install.sh --no-restart-apache
 	update-rc.d setup_timesyncd defaults
 	cp /usr/local/share/templog/_sbin/setup_templog_db_once /etc/init.d/
-	chmod a+x /etc/init.d/setup_templog_db_once
+	chmod u+x /etc/init.d/setup_templog_db_once
 	update-rc.d setup_templog_db_once defaults
 	raspi-config nonint do_memory_split 16
 	raspi-config nonint do_onewire 1

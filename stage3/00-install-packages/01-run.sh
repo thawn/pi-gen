@@ -18,7 +18,6 @@ on_chroot <<- \EOF
 	chmod a+x /usr/local/share/templog/_bin/*.py
 	chmod u+x /usr/local/share/templog/_sbin/*.sh
 	/usr/local/share/templog/_bin/install.sh --no-restart-apache
-	mysql < /usr/local/share/templog/_bin/create_database.sql
 	update-rc.d setup_timesyncd defaults
 	raspi-config nonint do_memory_split 16
 	raspi-config nonint do_onewire 1

@@ -1,7 +1,5 @@
 #!/bin/bash -e
-
-apt-get install -y grunt npm git
-apt-get install -y --no-install-recommends jekyll
+echo "ROOTFS_DIR: ${ROOTFS_DIR}"
 current_dir=$(pwd)
 git clone https://github.com/thawn/pitemplog.git
 cd pitemplog

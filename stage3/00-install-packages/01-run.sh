@@ -22,6 +22,7 @@ on_chroot <<- \EOF
 	cp /usr/local/share/templog/_sbin/setup_templog_db_once /etc/init.d/
 	chmod u+x /etc/init.d/setup_templog_db_once
 	update-rc.d setup_templog_db_once defaults
-	# raspi-config nonint do_memory_split 16 # do this in the config file
-	raspi-config nonint do_onewire 1
+	echo "config.txt:"
+	cat /boot/firmware/config.txt
+	echo "dtoverlay=w1-gpio" >> /boot/firmware/config.txt
 EOF

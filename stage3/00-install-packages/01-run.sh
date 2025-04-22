@@ -1,7 +1,7 @@
 #!/bin/bash -e
 echo "ROOTFS_DIR: ${ROOTFS_DIR}"
 current_dir=$(pwd)
-git clone -b own-pi-gen-repo https://github.com/thawn/pitemplog.git
+git clone https://github.com/thawn/pitemplog.git
 cd pitemplog
 npm install
 grunt
